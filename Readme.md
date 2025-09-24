@@ -78,3 +78,23 @@ uvicorn rag_fastapi:app --reload --port 8000
 
 Se puede probar la API en:
 ```http://localhost:8000/docs```
+
+
+---
+## Agente con Ollama, Wikipedia y Python REPL
+Se instala los paquetes adicionales listados en `requirements.agent.txt`.
+
+```bash
+pip install -r requirements.agent.txt
+```
+
+Ejemplo:
+
+```bash
+python agent.py
+```
+Donde se crea un agente que usa:
+- Un modelo de Ollama (Gemma 3 1B)
+- Wikipedia para buscar información
+- Python REPL para hacer cálculos o ejecutar código Python
+Y se le hace una pregunta que requiere buscar en Wikipedia y hacer un cálculo.
